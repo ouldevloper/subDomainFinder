@@ -12,6 +12,8 @@ def getSubDomain(url):
         for u in set(urls):
             if u=="" or len(u)<=3:
                 pass
-            print("[+] ",u.replace("\"","").replace("'","").replace(",","").replace("    ",""))
-
+            tmpUrl = u.split(',')
+            for url in tmpUrl:
+                uu = url.replace('"','').replace("[","").replace("]","")
+                print(f"[*] {uu}")
 getSubDomain(url)
